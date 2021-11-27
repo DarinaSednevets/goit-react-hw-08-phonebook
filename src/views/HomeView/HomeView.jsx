@@ -2,16 +2,9 @@ import { useSelector } from 'react-redux';
 import { authSelectors } from 'redux/auth';
 
 const styles = {
-  // container: {
-  //   // minHeight: 'calc(100vh - 50px)',
-  //   display: 'flex',
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  //   paddingTop: 500,
-  // },
   title: {
-    fontWeight: 500,
-    fontSize: 48,
+    fontWeight: 400,
+    fontSize: 36,
     textAlign: 'center',
   },
 };
@@ -31,7 +24,7 @@ export default function HomeView() {
         <div style={styles.container}>
           <p style={styles.title}>Welcome to Phonebook App!</p>
           <p style={styles.title}>
-            Register and use the application without restrictions
+            Register and use the application
           </p>
         </div>
       )}

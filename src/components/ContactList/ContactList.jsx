@@ -1,39 +1,4 @@
-// import { useEffect } from 'react';
-// import { useSelector, useDispatch } from 'react-redux';
-// import { contactOperations, contactSelectors } from 'redux/contact';
-// import styles from './ContactList.module.scss';
 
-// const ContactList = () => {
-//   const contacts = useSelector(contactSelectors.getFilteredContacts);
-//   const dispatch = useDispatch();
-
-//   useEffect(() => {
-//     dispatch(contactOperations.fetchContacts());
-//   }, [dispatch]);
-
-//   const onDeleteContacts = id => dispatch(contactOperations.deleteContact(id));
-
-//   return (
-//     <ul className={styles.list}>
-//       {contacts.map(({ name, number, id }) => {
-//         return (
-//           <li className={styles.list__item} key={id}>
-//             {name}: {number}
-//             <button
-//               type="button"
-//               className={styles.btn}
-//               onClick={() => onDeleteContacts(id)}
-//             >
-//               Delete
-//             </button>
-//           </li>
-//         );
-//       })}
-//     </ul>
-//   );
-// };
-
-// export default ContactList;
 import { useDispatch, useSelector } from "react-redux";
 import { fetchContacts, deleteContact } from '../../redux/contact/contact-operations'
 import { getFilteredContacts } from '../../redux/contact/contact-selectors'

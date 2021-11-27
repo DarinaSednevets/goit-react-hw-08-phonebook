@@ -31,7 +31,6 @@ const styles = {
     fontSize: 20,
     fontWeight: 600,
     backgroundColor: 'black',
-    // color: '#E84A5F',
     color: 'white',
   },
 };
@@ -66,7 +65,6 @@ export default function LoginView() {
 
       <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
         <label style={styles.label}>
-          {/* Email */}
           <input
             type="email"
             name="email"
@@ -77,7 +75,6 @@ export default function LoginView() {
         </label>
 
         <label style={styles.label}>
-          {/* Password */}
           <input
             type="password"
             name="password"
