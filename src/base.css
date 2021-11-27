@@ -1,0 +1,26 @@
+@media screen and (min-width: 800px) {
+  html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+  }
+}
+
+body {
+  background: rgba(85, 132, 177, 0.5);
+}
+ul {
+  list-style: none;
+}
+
+label {
+  margin-right: 40px;
+}
+
+label .input {
+  margin-left: 20px;
+  color: rgb(0, 0, 0);
+}
+label {
+  font-size: 1em;
+  color: rgb(58, 58, 58);
+}
