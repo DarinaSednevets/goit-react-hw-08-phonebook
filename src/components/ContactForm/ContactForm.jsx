@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from '../../redux/contact/contact-selectors';
 import { addContact } from '../../redux/contact/contact-operations';
-import { Button, Input } from '@mui/material'
+import { Button } from '@mui/material'
 
 
 function ContactForm() {
@@ -34,10 +34,8 @@ function ContactForm() {
       <section>
         <form onSubmit={handleSubmit}>
           <label>Name
-            <Input className="input"
+            <input className="input"
               type="text"
-              autoComplete='off'
-              autoFocus='true'
               name="name"
               pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
               title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
@@ -47,9 +45,8 @@ function ContactForm() {
             />
           </label>
           <label >Number
-            <Input className="input"
+            <input className="input"
               type="tel"
-              autoComplete='off'
               name="number"
               pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
               title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"

@@ -24,38 +24,35 @@ function ContactList() {
 
 
   return (
-    <div>
-      <TableContainer >
-        <Table sx={{ maxWidth: 600 }} size="small" align="center" aria-label="contacts" >
-          <TableHead>
-          </TableHead>
 
+    <TableContainer>
+      <Table sx={{ maxWidth: 600 }} align="center" aria-label="contacts" >
+        <TableHead>
           <TableRow>
             <TableCell scope="col" align="left"></TableCell>
-            <TableCell scope="col" align="left" size="md">Name</TableCell>
-            <TableCell scope="col" align="left" size="md">Phone number</TableCell>
+            <TableCell scope="col" align="left" >Name</TableCell>
+            <TableCell scope="col" align="left">Phone number</TableCell>
           </TableRow>
-          <TableBody >
-            {filteredContacts.map(({ id, name, number }) =>
-            (<TableRow key={id} id={id}>
-              <TableCell >
-                <Button
-                  size="small"
-                  color="error"
-                  type="button"
-                  onClick={() => dispatch(deleteContact(id))}
-                ><DeleteForeverIcon size="small" />
-                </Button>
+        </TableHead>
+        <TableBody>
+          {filteredContacts.map(({ id, name, number }) =>
+          (<TableRow key={id} id={id}>
+            <TableCell  >
+              <Button
+                size="small"
+                color="error"
+                type="button"
+                onClick={() => dispatch(deleteContact(id))}
+              ><DeleteForeverIcon />
+              </Button>
+            </TableCell>
+            <TableCell >{name}</TableCell>
+            <TableCell >{number}</TableCell>
+          </TableRow>))}
+        </TableBody>
+      </Table>
+    </TableContainer>
 
-
-              </TableCell>
-              <TableCell>{name}</TableCell>
-              <TableCell>{number}</TableCell>
-            </TableRow>))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </div>
   )
 }
 
