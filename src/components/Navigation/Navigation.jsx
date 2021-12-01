@@ -1,25 +1,13 @@
 import { useSelector } from 'react-redux';
 import { authSelectors } from 'redux/auth';
 import { NavLink } from 'react-router-dom';
-
-const styles = {
-  link: {
-    display: 'inline-block',
-    textDecoration: 'none',
-    padding: 12,
-    fontWeight: 700,
-    color: '#2A363B',
-  },
-  activeLink: {
-    color: '#E84A5F',
-  },
-};
+import styles from './Navigation.module.scss'
 
 export default function Navigation() {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   return (
-    <nav>
-      <NavLink to="/" exact style={styles.link} activeStyle={styles.activeLink}>
+    <nav className={styles.navigation}>
+      <NavLink to="/" exact className={styles.link} activeClassName={styles.activeLink}>
         Home
       </NavLink>
 
@@ -27,8 +15,8 @@ export default function Navigation() {
         <NavLink
           to="/contacts"
           exact
-          style={styles.link}
-          activeStyle={styles.activeLink}
+          className={styles.link}
+          activeClassName={styles.activeLink}
         >
           Phonebook
         </NavLink>
