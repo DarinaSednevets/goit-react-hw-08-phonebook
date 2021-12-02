@@ -3,7 +3,7 @@ import AuthNav from 'components/AuthNav';
 import Navigation from 'components/Navigation';
 import UserMenu from 'components/UserMenu';
 import { authSelectors } from 'redux/auth';
-import styles from './AppBar.module.scss'
+import styles from './AppBar.module.css'
 
 
 export default function AppBar() {

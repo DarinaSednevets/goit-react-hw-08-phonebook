@@ -1,0 +1,7 @@
+.label {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
