@@ -59,7 +59,6 @@ function ContactForm() {
         />
 
         <Button
-          fullWidth='false'
           type='submit'
           variant="outlined"
           disabled={!name || !number}

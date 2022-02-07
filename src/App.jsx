@@ -20,18 +20,6 @@ const LoginView = lazy(() => import('./views/LoginView'));
 
 
 
-// const customTheme = createTheme({
-//   palette: {
-//     primary: {
-//       main: '#fff',
-//     },
-//     secondary: {
-//       main: '#777',
-//     },
-//   },
-// });
-
-
 export default function App() {
   const dispatch = useDispatch();
   const isFetchingCurrentUser = useSelector(authSelectors.getIsFetchingCurrent);
@@ -42,7 +30,6 @@ export default function App() {
 
   return (
     !isFetchingCurrentUser && (
-      // <ThemeProvider theme={customTheme}>
       <Container>
         <AppBar />
         <Switch>
@@ -69,8 +56,6 @@ export default function App() {
           </Suspense>
         </Switch>
       </Container>
-      // </ThemeProvider>
-
     )
   )
 }
