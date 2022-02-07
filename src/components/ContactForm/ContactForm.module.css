@@ -6,8 +6,9 @@
   justify-content: space-between;
 }
 .form input {
-  padding-left: 20px;
+  text-align: center;
 }
+
 .form button {
   max-width: 60px;
 }

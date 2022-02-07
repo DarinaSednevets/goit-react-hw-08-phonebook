@@ -3,7 +3,7 @@ import { Switch } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { authOperations, authSelectors } from 'redux/auth';
 
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+// import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import Container from 'components/Container';
 import AppBar from './components/AppBar/AppBar';
@@ -20,16 +20,16 @@ const LoginView = lazy(() => import('./views/LoginView'));
 
 
 
-const customTheme = createTheme({
-  palette: {
-    primary: {
-      main: '#fff',
-    },
-    secondary: {
-      main: '#777',
-    },
-  },
-});
+// const customTheme = createTheme({
+//   palette: {
+//     primary: {
+//       main: '#fff',
+//     },
+//     secondary: {
+//       main: '#777',
+//     },
+//   },
+// });
 
 
 export default function App() {
@@ -42,34 +42,34 @@ export default function App() {
 
   return (
     !isFetchingCurrentUser && (
-      <ThemeProvider theme={customTheme}>
-        <Container>
-          <AppBar />
-          <Switch>
-            <Suspense fallback={<p>Loading...</p>}>
-              <PublicRoute path="/" exact>
-                <HomeView />
-              </PublicRoute>
+      // <ThemeProvider theme={customTheme}>
+      <Container>
+        <AppBar />
+        <Switch>
+          <Suspense fallback={<p>Loading...</p>}>
+            <PublicRoute path="/" exact>
+              <HomeView />
+            </PublicRoute>
 
-              <PublicRoute path="/register" restricted>
-                <RegisterView />
-              </PublicRoute>
+            <PublicRoute path="/register" restricted>
+              <RegisterView />
+            </PublicRoute>
 
-              <PublicRoute path="/login" redirectTo="/contacts" restricted>
-                <LoginView />
-              </PublicRoute>
+            <PublicRoute path="/login" redirectTo="/contacts" restricted>
+              <LoginView />
+            </PublicRoute>
 
-              <PrivateRoute path="/contacts" redirectTo="/login">
-                <h1>Phonebook</h1>
-                <ContactForm />
-                <h2>Contacts</h2>
-                <Filter />
-                <ContactList />
-              </PrivateRoute>
-            </Suspense>
-          </Switch>
-        </Container>
-      </ThemeProvider>
+            <PrivateRoute path="/contacts" redirectTo="/login">
+              <h1>Phonebook</h1>
+              <ContactForm />
+              <h2>Contacts</h2>
+              <Filter />
+              <ContactList />
+            </PrivateRoute>
+          </Suspense>
+        </Switch>
+      </Container>
+      // </ThemeProvider>
 
     )
   )

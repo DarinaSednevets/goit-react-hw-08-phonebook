@@ -46,8 +46,6 @@ function ContactForm() {
           onChange={e => setName(e.target.value)}
         />
 
-
-
         <Input
           placeholder="Number"
           className="input"
