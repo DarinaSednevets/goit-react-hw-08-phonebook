@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/views/HomeView/HomeView.module.css"],"names":[],"mappings":"AAAA,uBACE,eAAgB,CAChB,cAAe,CACf,iBACF","file":"3.d7c5f191.chunk.css","sourcesContent":[".title {\r\n  font-weight: 400;\r\n  font-size: 36px;\r\n  text-align: center;\r\n}\r\n"]}
